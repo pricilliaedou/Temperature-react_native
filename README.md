@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# Convertisseur de température
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Application React Native (Expo) pour convertir des températures entre degrés Celsius (°C) et Fahrenheit (°F). L’arrière-plan change (chaud / froid) selon la température saisie.
 
-## Get started
+## Fonctionnalités
 
-1. Install dependencies
+- **Saisie** de la température dans l’unité courante (°C ou °F)
+- **Affichage** de la valeur convertie dans l’autre unité
+- **Bouton** pour basculer l’unité de saisie (et donc la conversion)
+- **Fond dynamique** : image « froid » (glace) ou « chaud » selon que la température est en dessous ou au-dessus du seuil (0 °C / 32 °F)
+
+## Démarrage
+
+1. Installer les dépendances :
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Lancer l’app :
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+   Ensuite, ouvrir l’app dans un émulateur Android/iOS ou via [Expo Go](https://expo.dev/go).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Structure du projet
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **`app/`** — écrans (routing Expo Router) ; `index.tsx` = écran principal
+- **`component/`** — composants réutilisables :
+  - `InputTemperature` — champ de saisie avec suffixe °C ou °F
+  - `TemperatureDisplay` — affichage de la température convertie
+  - `ButtonConvert` — bouton pour changer d’unité
+- **`services/temperature-service.js`** — conversion °C ↔ °F et détection froid/chaud
+- **`constant.ts`** — constantes et type `Unit` (°C | °F)
+- **`assets/images/`** — images de fond (hot.png, cold.png)
 
-## Get a fresh project
+## Stack
 
-When you're ready, run:
+- [Expo](https://expo.dev) ~54
+- React Native
+- TypeScript (fichiers principaux)
+- Expo Router (navigation basée sur les fichiers)
 
-```bash
-npm run reset-project
-```
+## En savoir plus
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Documentation Expo](https://docs.expo.dev/)
+- [Expo Router](https://docs.expo.dev/router/introduction/)
