@@ -4,7 +4,7 @@ Application React Native (Expo) pour convertir des températures entre degrés C
 
 ## Démo
 
-<video src="assets/appli.mp4" controls width="320"></video>
+[▶ Voir la démo (appli.mp4)](assets/appli.mp4)
 
 ## Fonctionnalités
 
