@@ -2,6 +2,10 @@
 
 Application React Native (Expo) pour convertir des températures entre degrés Celsius (°C) et Fahrenheit (°F). L’arrière-plan change (chaud / froid) selon la température saisie.
 
+## Démo
+
+<video src="assets/appli.mp4" controls width="320"></video>
+
 ## Fonctionnalités
 
 - **Saisie** de la température dans l’unité courante (°C ou °F)
